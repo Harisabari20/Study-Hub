@@ -138,8 +138,12 @@ function displayUsers() {
 
   let totalUsersEl = document.getElementById("totalUsers");
   if (totalUsersEl) {
-    // Display persistent total count instead of current array length
-    let totalUsersEver = parseInt(localStorage.getItem("totalUsersEver")) || 0;
+    // Maintain a persistent overall count even when user list is cleared
+    let totalUsersEver = parseInt(localStorage.getItem("totalUsersEver"));
+    if (isNaN(totalUsersEver) || totalUsersEver < 0) {
+      totalUsersEver = users.length;
+      localStorage.setItem("totalUsersEver", totalUsersEver.toString());
+    }
     totalUsersEl.innerText = totalUsersEver;
   }
 }
