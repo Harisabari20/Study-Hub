@@ -5,16 +5,15 @@ body {
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
-  display: block;
-  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   body {
-    display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     padding: 20px;
   }
 }
@@ -24,11 +23,11 @@ body {
   animation: fadeIn 2s ease-in-out;
   color: rgb(40, 9, 244);
   font-size: 3rem;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
+  display: block;
 }
 
 .animated-header:hover {
@@ -82,10 +81,10 @@ body {
 
 .login-box {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 15px;
-  margin: 10px 0;
-  width: 100%;
-  max-width: 100%;
+  padding: 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 600px;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border: none;
@@ -96,7 +95,6 @@ body {
 @media (min-width: 768px) {
   .login-box {
     padding: 40px;
-    margin: 20px auto;
     width: 90%;
     max-width: 340px;
   }
@@ -229,13 +227,23 @@ button {
 
 .resource-box {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 30px;
-  margin: 20px auto;
-  width: 320px;
+  padding: 20px;
+  margin: 15px auto;
+  width: 90%;
+  max-width: 600px;
   border-radius: 15px;
   text-align: center;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border: 2px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .resource-box {
+    padding: 30px;
+    width: 320px;
+    max-width: 320px;
+  }
 }
 
 .resource-box h2 {
@@ -274,6 +282,12 @@ button {
     letter-spacing: 0.5px;
   }
 
+  .login-box {
+    width: 95%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
   .resource-btn {
     width: calc(100% - 24px);
     margin: 8px 12px;
@@ -282,10 +296,10 @@ button {
   }
 
   .resource-box {
-    width: 100%;
+    width: 95%;
     max-width: 100%;
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px auto;
   }
 
   .resource-box h2 {
@@ -299,6 +313,11 @@ button {
     margin: 8px 12px;
     padding: 10px 15px;
     font-size: 14px;
+  }
+
+  input, .login-box button {
+    width: calc(100% - 24px);
+    margin: 8px 12px;
   }
 
   .admin-btn {
@@ -385,9 +404,18 @@ button {
 
 /* ADMIN PANEL STYLES */
 .admin-container {
+  width: 90%;
   max-width: 900px;
-  margin: 30px auto;
-  padding: 20px;
+  margin: 15px auto;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .admin-container {
+    margin: 30px auto;
+    padding: 20px;
+  }
 }
 
 .admin-title {
@@ -501,11 +529,9 @@ button {
   }
   
   .admin-container {
-    margin: 0;
+    width: 95%;
+    margin: 15px auto;
     padding: 15px;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 100%;
   }
   
   .admin-title {
