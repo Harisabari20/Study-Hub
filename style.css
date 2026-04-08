@@ -247,11 +247,13 @@ button {
 
   .login-box {
     padding: 20px;
+    width: 95%;
+    max-width: 100%;
   }
 
   .login-box h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
   }
 
   input, .login-box button {
@@ -262,22 +264,48 @@ button {
 
   .resource-btn {
     width: calc(100% - 20px);
-    margin: 10px;
+    margin: 8px 10px;
+    padding: 10px 15px;
     display: block;
   }
 
-  .login-box, .resource-box {
-    width: 90%;
-    max-width: 300px;
-    padding: 25px;
+  .resource-box {
+    width: 95%;
+    max-width: 100%;
+    padding: 15px;
+    margin: 15px auto;
+  }
+
+  .resource-box h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .resource-link {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 8px 12px;
+    padding: 10px 15px;
+    font-size: 14px;
   }
 
   input {
     font-size: 16px;
   }
 
-  body {
-    padding: 10px;
+  .admin-btn {
+    width: calc(100% - 20px);
+    margin: 10px 0;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: calc(100% - 20px);
+    margin: 8px auto !important;
   }
 }
 
@@ -464,19 +492,57 @@ button {
   }
   
   .admin-container {
-    margin: 20px 10px;
+    margin: 0;
     padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .admin-title {
     font-size: 24px;
+    margin-bottom: 20px;
   }
   
   .admin-actions {
     flex-direction: column;
+    gap: 10px;
   }
   
-  .clear-btn {
-    width: 100%;
+  .clear-btn, .back-btn {
+    width: calc(100% - 24px);
+    margin: 5px 12px;
+  }
+  
+  .users-section {
+    padding: 15px;
+  }
+  
+  .user-list li {
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+  
+  .resource-box {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
+  
+  .resource-link {
+    display: block;
+    width: calc(100% - 24px);
+    margin: 8px 12px;
+    padding: 10px 15px;
+  }
+  
+  .button-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-group button {
+    width: calc(100% - 24px);
+    margin: 5px 12px !important;
   }
 }
