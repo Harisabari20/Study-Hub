@@ -35,6 +35,11 @@ function login() {
       roll: roll,
       loginTime: new Date().toLocaleString()
     });
+    
+    // Track total users ever (persistent count)
+    let totalUsersEver = parseInt(localStorage.getItem("totalUsersEver")) || 0;
+    totalUsersEver++;
+    localStorage.setItem("totalUsersEver", totalUsersEver.toString());
   }
 
   localStorage.setItem("users", JSON.stringify(users));
@@ -133,7 +138,9 @@ function displayUsers() {
 
   let totalUsersEl = document.getElementById("totalUsers");
   if (totalUsersEl) {
-    totalUsersEl.innerText = users.length;
+    // Display persistent total count instead of current array length
+    let totalUsersEver = parseInt(localStorage.getItem("totalUsersEver")) || 0;
+    totalUsersEl.innerText = totalUsersEver;
   }
 }
 
