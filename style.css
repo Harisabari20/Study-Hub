@@ -1,17 +1,21 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
   background: #f5f7fa;
   min-height: 100vh;
   margin: 0;
   padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .animated-header {
   font-weight: bold;
   animation: fadeIn 2s ease-in-out;
   color: rgb(40, 9, 244);
-  font-size: 48px;
+  font-size: 3rem;
   margin-bottom: 40px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -72,11 +76,13 @@ body {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 40px;
   margin: 20px auto;
-  width: 340px;
+  width: 90%;
+  max-width: 340px;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border: none;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
 }
 
 .login-box:hover {
@@ -224,15 +230,34 @@ button {
 }
 
 @media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
   .animated-header {
-    font-size: 32px;
-    margin-bottom: 30px;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   .tagline {
     font-size: 14px;
-    margin: -20px 0 25px 0;
+    margin: -15px 0 20px 0;
     letter-spacing: 1px;
+  }
+
+  .login-box {
+    padding: 20px;
+  }
+
+  .login-box h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  input, .login-box button {
+    width: 90%;
+    padding: 10px 12px;
+    font-size: 14px;
   }
 
   .resource-btn {
