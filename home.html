@@ -25,8 +25,12 @@
 
 <script src="script.js"></script>
 <script>
+  // Only show admin button if user is actually the admin with correct credentials
   if (localStorage.getItem("isAdmin") === "true") {
-    document.getElementById("adminBtn").style.display = "block";
+    let currentUser = JSON.parse(localStorage.getItem("currentUser")) || {};
+    if (currentUser.name === "pixelcoder" && currentUser.roll === "231702005") {
+      document.getElementById("adminBtn").style.display = "block";
+    }
   }
 </script>
 </body>
