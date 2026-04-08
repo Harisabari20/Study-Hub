@@ -3,18 +3,20 @@ body {
   background: #f5f7fa;
   min-height: 100vh;
   margin: 0;
-  padding: 10px;
+  padding: 20px 10px;
   box-sizing: border-box;
   text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   body {
     justify-content: center;
-    padding: 20px;
+    padding: 15px 10px;
   }
 }
 
@@ -23,11 +25,12 @@ body {
   animation: fadeIn 2s ease-in-out;
   color: rgb(40, 9, 244);
   font-size: 3rem;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   transition: all 0.3s ease;
   display: block;
+  max-width: 100%;
 }
 
 .animated-header:hover {
@@ -62,10 +65,12 @@ body {
 .tagline {
   font-size: 18px;
   color: #555;
-  margin: -25px 0 30px 0;
+  margin: 0 auto 30px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   animation: slideIn 1.5s ease-in-out 0.3s both;
+  max-width: 100%;
+  text-align: center;
 }
 
 @keyframes slideIn {
@@ -83,8 +88,8 @@ body {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
   padding: 20px;
   margin: 15px auto;
-  width: 90%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 380px;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   border: none;
@@ -146,9 +151,16 @@ input {
 }
 
 input::placeholder {
-  color: #999;
-  font-style: italic;
-  font-size: 14px;
+  color: #666;
+  font-style: normal;
+  font-size: 15px;
+  opacity: 0.8;
+  text-align: left;
+}
+
+input {
+  color: #333;
+  text-align: left;
 }
 
 input:focus {
@@ -278,14 +290,14 @@ button {
 
   .tagline {
     font-size: 14px;
-    margin: -10px 0 15px 0;
+    margin: 0 0 15px 0;
     letter-spacing: 0.5px;
   }
 
   .login-box {
-    width: 95%;
-    max-width: 100%;
-    padding: 15px;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
   }
 
   .resource-btn {
@@ -296,8 +308,8 @@ button {
   }
 
   .resource-box {
-    width: 95%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 420px;
     padding: 15px;
     margin: 10px auto;
   }
