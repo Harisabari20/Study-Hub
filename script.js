@@ -138,9 +138,8 @@ function displayUsers() {
 
   let totalUsersEl = document.getElementById("totalUsers");
   if (totalUsersEl) {
-    // Maintain a persistent overall count even when user list is cleared
     let totalUsersEver = parseInt(localStorage.getItem("totalUsersEver"));
-    if (isNaN(totalUsersEver) || totalUsersEver < 0) {
+    if (isNaN(totalUsersEver) || totalUsersEver < users.length) {
       totalUsersEver = users.length;
       localStorage.setItem("totalUsersEver", totalUsersEver.toString());
     }

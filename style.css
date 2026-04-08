@@ -251,7 +251,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 18px;
 }
 
 @media (min-width: 768px) {
@@ -264,7 +264,7 @@ button {
 
 .resource-box h2 {
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   font-size: 24px;
 }
 
@@ -273,15 +273,15 @@ button {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 260px;
   background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
   color: white;
-  padding: 12px 25px;
+  padding: 14px 20px;
   margin: 8px 0;
   text-decoration: none;
-  border-radius: 8px;
+  border-radius: 12px;
   transition: all 0.3s;
-  font-weight: 500;
+  font-weight: 600;
+  box-sizing: border-box;
 }
 
 .resource-link:hover {
