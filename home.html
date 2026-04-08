@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studyhub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="login-box">
+        <p class="tagline">Design Develop Deliver</p>
+
+        <button id="adminBtn" class="admin-btn" onclick="goToAdmin()" style="display:none;">Admin Panel</button>
+
+        <h2>Resources</h2>
+
+        <button id="unrealBtn" class="resource-btn" onclick="openSection('unreal')">Unreal Engine</button>
+        <button id="mayaBtn" class="resource-btn" onclick="openSection('maya')">Maya</button>
+
+        <div class="button-group">
+          <button id="backBtn" class="back-btn" style="display:none;" onclick="goBack()">Back</button>
+          <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+</div>
+<div id="content"></div>
+
+<script src="script.js"></script>
+<script>
+  if (localStorage.getItem("isAdmin") === "true") {
+    document.getElementById("adminBtn").style.display = "block";
+  }
+</script>
+</body>
+</html>
